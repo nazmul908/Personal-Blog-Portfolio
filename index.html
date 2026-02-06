@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Nazmul Haque | Personal Blog - ML & Full-Stack Engineer</title>
+  <meta name="title" content="Nazmul Haque | Personal Blog - ML & Full-Stack Engineer">
+  <meta name="description" content="Personal blog of Nazmul Haque - Electrical & Electronic Engineering student, Full-stack Developer, and ML Engineer. Explore projects, articles, and insights on web development, machine learning, and computer vision.">
+  <meta name="keywords" content="Nazmul Haque, Nazmul, Nazmul Haque Nihal, Blog, Portfolio, Web Development, Machine Learning, Python, React, Flask, Electrical Engineering, GitHub, Projects, AI, Computer Vision">
+  <meta name="author" content="Nazmul Haque">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#1e1e1f">
+
+  <!-- Security Meta Tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <!-- Copyright Protection -->
+  <meta name="copyright" content="Copyright © 2024 Nazmul Haque. All rights reserved.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nazmul Haque | Personal Blog">
+  <meta property="og:description" content="Personal blog of Nazmul Haque - EEE student, Full-stack Developer, and ML Engineer">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nazmul Haque | Personal Blog">
+  <meta name="twitter:description" content="Personal blog of Nazmul Haque - EEE student, Full-stack Developer, and ML Engineer">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/nazmul-avatar.png">
+  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
+  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
+
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <span class="logo-text">Nazmul Haque</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <span class="logo-text">Nazmul Haque</span>
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link hover-1" data-nav-toggler>About</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="navbar-link hover-1" data-nav-toggler>Skills</a>
+          </li>
+
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Featured</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="navbar-link hover-1" data-nav-toggler>Projects</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+          </li>
+
+        </ul>
+
+        <div class="navbar-bottom">
+
+          <div class="profile-card">
+            <img src="./assets/images/nazmul-avatar.png" width="48" height="48" alt="Nazmul Haque" class="profile-banner">
+
+            <div>
+              <p class="card-title">Hello Nazmul !</p>
+
+              <p class="card-subtitle">
+                Welcome to my blog
+              </p>
+            </div>
+          </div>
+
+          <ul class="link-list">
+
+            <li>
+              <a href="#about" class="navbar-bottom-link hover-1">About Me</a>
+            </li>
+
+            <li>
+              <a href="#projects" class="navbar-bottom-link hover-1">My Projects</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="navbar-bottom-link hover-1">Contact</a>
+            </li>
+
+            <li>
+              <a href="My_Resume_with_Github_Portfolio-1.pdf" target="_blank" class="navbar-bottom-link hover-1">Download CV</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <p class="copyright-text">
+          Copyright 2024 © Nazmul Haque Personal Blog.
+          All rights reserved
+        </p>
+
+      </nav>
+
+      <a href="My_Resume_with_Github_Portfolio-1.pdf" target="_blank" class="btn btn-primary">
+        <span class="span">Download CV</span>
+        <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+      </a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!--
+        - #HERO
+      -->
+
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Hello Everyone!</p>
+
+            <h1 class="headline headline-1 section-title">
+              I'm <span class="span">Nazmul Haque</span>
+            </h1>
+
+            <p class="hero-text">
+              Electrical & Electronic Engineering Student | Full-stack Developer | ML Engineer
+              <br><br>
+              Passionate about building innovative web applications, machine learning systems, and quantum-inspired solutions. I transform ideas into reality through code.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">
+                <span class="span">Explore Projects</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                <span class="span">Get In Touch</span>
+              </a>
+            </div>
+
+            <div class="hero-social">
+              <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="social-link">
+                <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+              </a>
+              <a href="https://www.linkedin.com/in/nazmul-haque-nihal/" target="_blank" class="social-link">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+              </a>
+              <a href="https://www.facebook.com/nazmul.haque.nihal.07" target="_blank" class="social-link">
+                <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+              </a>
+              <a href="mailto:nazmulhaque.green@gmail.com" class="social-link">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/nazmul-avatar.png" width="327" height="490" alt="Nazmul Haque" class="w-100 hero-avatar">
+
+            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+
+            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+
+          </div>
+
+          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+
+          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <div class="about-content">
+
+            <h2 class="headline headline-2 section-title">
+              <span class="span">About Me</span>
+            </h2>
+
+            <p class="section-text">
+              Hi, I'm <strong>Nazmul Haque</strong>. I am an <strong>Electrical & Electronic Engineering</strong> student with a strong passion for <strong>Programming</strong>, <strong>Web Development</strong>, <strong>Machine Learning</strong>, and <strong>Quantum Computing</strong>.
+            </p>
+
+            <p class="section-text">
+              I am proficient in <strong>Python</strong>, <strong>JavaScript</strong>, <strong>React</strong>, and <strong>TensorFlow</strong>. I have hands-on experience developing secure, decentralized applications (like my Blockchain Voting System), AI-powered chatbots (SPD Bot for Engineers), and innovative computer vision systems (Weapon Detection, Object Diameter Measurement).
+            </p>
+
+            <p class="section-text">
+              My academic background in EEE complements my technical skills in full-stack development, enabling me to tackle complex technical and mathematical challenges. I continuously explore new technologies and am dedicated to building efficient, scalable, and innovative software solutions.
+            </p>
+
+            <div class="about-stats">
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <ion-icon name="school-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <div class="stat-info">
+                  <p class="stat-label">Education</p>
+                  <p class="stat-value">BSc in EEE</p>
+                  <p class="stat-sub">Green University of Bangladesh</p>
+                  <p class="stat-date">2022 - Present</p>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <div class="stat-info">
+                  <p class="stat-label">Location</p>
+                  <p class="stat-value">Rupganj, Dhaka</p>
+                  <p class="stat-sub">Bangladesh</p>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <div class="stat-info">
+                  <p class="stat-label">Birthday</p>
+                  <p class="stat-value">August 28</p>
+                  <p class="stat-sub">2002</p>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <div class="stat-info">
+                  <p class="stat-label">Email</p>
+                  <p class="stat-value">nazmulhaque.green@gmail.com</p>
+                  <p class="stat-sub">Contact me anytime</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #SKILLS
+      -->
+
+      <section class="section skills" id="skills" aria-label="skills">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Skills & Technologies</span>
+          </h2>
+
+          <p class="section-text">
+            Technologies and tools I work with
+          </p>
+
+          <div class="skills-grid">
+
+            <!-- Programming Languages -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="skill-title">Programming Languages</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">MATLAB</span>
+              </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="earth-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="skill-title">Web Development</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Express</span>
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Vite</span>
+              </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="hardware-chip-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="skill-title">Machine Learning & AI</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">Scikit-Learn</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">YOLO</span>
+                <span class="skill-tag">SSD</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">Keras</span>
+                <span class="skill-tag">NLP</span>
+              </div>
+            </div>
+
+            <!-- Tools & Platforms -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="construct-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="skill-title">Tools & Platforms</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Ubuntu</span>
+                <span class="skill-tag">Jupyter</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+              </div>
+            </div>
+
+            <!-- Areas of Interest -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="skill-title">Areas of Interest</h3>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Web Development</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Image Processing</span>
+                <span class="skill-tag">Quantum Computing</span>
+                <span class="skill-tag">Blockchain</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">IoT</span>
+                <span class="skill-tag">IIoT</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #FEATURED PROJECTS
+      -->
+
+      <section class="section feature" aria-label="feature" id="featured">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Featured Projects</span>
+          </h2>
+
+          <p class="section-text">
+            Highlighted projects showcasing my expertise
+          </p>
+
+          <ul class="feature-list">
+
+            <!-- Featured Project 1: Blockchain Voting System -->
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/blockchain_voting.png" width="1602" height="903" loading="lazy"
+                    alt="Blockchain Voting System - Secure Decentralized Voting Platform" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Blockchain</a>
+                      <a href="#" class="span hover-2">#WebDev</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">8 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://github.com/nazmul-haque-nihal/Blockchain-Voting-System" target="_blank" class="card-title hover-2">
+                      Blockchain Voting System - Secure Decentralized Voting Platform
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    A secure, decentralized voting system built with Python and Flask. Implements blockchain technology for transparent and tamper-proof elections. Features real-time vote tracking and cryptographic security.
+                  </p>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/nazmul-avatar.png" width="48" height="48" loading="lazy" alt="Nazmul Haque"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Nazmul Haque</p>
+                        <p class="card-subtitle">Lead Developer</p>
+                      </div>
+                    </div>
+
+                    <a href="https://github.com/nazmul-haque-nihal/Blockchain-Voting-System" target="_blank" class="card-btn">
+                      <span>View Project</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Featured Project 2: SPD AI Chatbot -->
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/spd_ai_chatbot.png" width="1602" height="903" loading="lazy"
+                    alt="SPD Bot for Engineers - AI Chatbot" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#AI</a>
+                      <a href="#" class="span hover-2">#Chatbot</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://nazmul-ai-chatbot.onrender.com" target="_blank" class="card-title hover-2">
+                      SPD Bot for Engineers - AI Chatbot with Real-time Capabilities
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    An intelligent AI chatbot built with React and Firebase. Features real-time communication using Server-Sent Events (SSE), high uptime, and an intuitive interface for engineers.
+                  </p>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/nazmul-avatar.png" width="48" height="48" loading="lazy" alt="Nazmul Haque"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Nazmul Haque</p>
+                        <p class="card-subtitle">Full-Stack Developer</p>
+                      </div>
+                    </div>
+
+                    <a href="https://nazmul-ai-chatbot.onrender.com" target="_blank" class="card-btn">
+                      <span>Live Demo</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Featured Project 3: Weapon Detection System -->
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/weapon_detection.png" width="1602" height="903" loading="lazy"
+                    alt="Weapon Detection System using YOLO/SSD" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#ComputerVision</a>
+                      <a href="#" class="span hover-2">#ML</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">10 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://github.com/nazmul-haque-nihal/Weapon-Detection-System" class="card-title hover-2">
+                      Weapon Detection System using YOLO and SSD Object Detection
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    A real-time weapon detection system using YOLO and SSD algorithms. Achieves 92% accuracy in detecting weapons from video streams. Built with Python and OpenCV for security applications.
+                  </p>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/nazmul-avatar.png" width="48" height="48" loading="lazy" alt="Nazmul Haque"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Nazmul Haque</p>
+                        <p class="card-subtitle">ML Engineer</p>
+                      </div>
+                    </div>
+
+                    <a href="https://github.com/nazmul-haque-nihal/Weapon-Detection-System" target="_blank" class="card-btn">
+                      <span>View Project</span>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #ALL PROJECTS
+      -->
+
+      <section class="section recent-post" id="projects" aria-label="projects">
+        <div class="container">
+
+          <div class="post-main">
+
+            <h2 class="headline headline-2 section-title">
+              <span class="span">All Projects</span>
+            </h2>
+
+            <p class="section-text">
+              Complete list of my projects and work samples
+            </p>
+
+            <ul class="grid-list">
+
+              <!-- Project 1: FANAZ AI Image Generator -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/fanaz_ai_image_generator.png" width="1602" height="903" loading="lazy"
+                      alt="FANAZ AI Image Generator - AI Image Generation" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://nazmul-ai-image-generator.netlify.app" target="_blank" class="card-badge">AI & ML</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://nazmul-ai-image-generator.netlify.app" target="_blank" class="link hover-2">FANAZ AI Image Generator - Advanced AI-Powered Image Creation</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A cutting-edge web application leveraging state-of-the-art AI models to create stunning, photorealistic images from text descriptions. Built with React, TypeScript, and Node.js.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#React</a>
+                        <a href="#" class="span hover-2">#AI</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">5 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 2: SPD Current Affairs -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/spd_current_affairs.png" width="1602" height="903" loading="lazy"
+                      alt="SPD Current Affairs - NLP Summarization" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://spd-bd-current-affairs.onrender.com/" target="_blank" class="card-badge">NLP & AI</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://spd-bd-current-affairs.onrender.com/" target="_blank" class="link hover-2">SPD Current Affairs - NLP News Summarization</a>
+                    </h3>
+
+                    <p class="card-text">
+                      An intelligent news summarization platform built with Flask and NLP. Provides high-accuracy summaries of current affairs. Serving 500+ users with customizable options.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Flask</a>
+                        <a href="#" class="span hover-2">#NLP</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">5 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 3: Object Diameter Measurement -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/image_processing_gui.png" width="1602" height="903" loading="lazy"
+                      alt="Object Diameter Measurement GUI" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">Computer Vision</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">Object Diameter Measurement GUI with MATLAB</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A MATLAB-based image processing application for measuring object diameters. Achieves 95% accuracy with an intuitive GUI for industrial applications.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#MATLAB</a>
+                        <a href="#" class="span hover-2">#ImageProcessing</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">4 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 4: Nazmul Programming Tools -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/nazmul_programming_tools.png" width="1602" height="903" loading="lazy"
+                      alt="Nazmul's Developer Toolkit - 120+ Programming Tools" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://nazmulprogramming-tools.netlify.app/" target="_blank" class="card-badge">Developer Tools</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://nazmulprogramming-tools.netlify.app/" target="_blank" class="link hover-2">Nazmul's Developer Toolkit - 120+ Programming Tools</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A comprehensive collection of 120+ essential programming tools for developers. From JSON formatting to encryption, code minification to data validation - everything in one place.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#React</a>
+                        <a href="#" class="span hover-2">#TypeScript</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">5 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 5: Naz Tailors -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/naz_tailors.png" width="1602" height="903" loading="lazy"
+                      alt="Naz Tailors - Professional Tailoring Services" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://naz-tailors.vercel.app" target="_blank" class="card-badge">E-Commerce</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://naz-tailors.vercel.app" target="_blank" class="link hover-2">Naz Tailors - Professional Tailoring Services Platform</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A modern, full-stack professional tailoring platform for the Bangladeshi market. Combining traditional craftsmanship with cutting-edge technology.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Next.js</a>
+                        <a href="#" class="span hover-2">#Firebase</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 6: TrendTracker -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/trendtracker.png" width="1602" height="903" loading="lazy"
+                      alt="TrendTracker - Multi-Platform Trend Aggregator" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">Data Analytics</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">TrendTracker - Multi-Platform Trend Aggregator & Analyzer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A real-time dashboard for discovering latest viral content across YouTube, Reddit, and more. Leverages official APIs to fetch trending content with categories.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Python</a>
+                        <a href="#" class="span hover-2">#Flask</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">7 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 7: IIoT Inventory Management System -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/iiot_inventory_system.png" width="1602" height="903" loading="lazy"
+                      alt="IIoT Inventory Management System" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">IoT & IIoT</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">IIoT-Based Proactive Inventory Management System</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Complete end-to-end inventory tracking system using RFID, cloud database, and real-time web dashboard. Features IoT simulator and ESP32 firmware.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Node.js</a>
+                        <a href="#" class="span hover-2">#IoT</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">8 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 8: Numerical Analysis Toolkit -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/numerical_analysis_toolkit.png" width="1602" height="903" loading="lazy"
+                      alt="Numerical Analysis Pro Toolkit" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">Mathematics</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">Numerical Analysis Pro Toolkit</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A comprehensive MATLAB toolkit for numerical analysis methods including Regula Falsi, visualization tools. Used by 200+ students and professionals.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#MATLAB</a>
+                        <a href="#" class="span hover-2">#Algorithms</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 9: Stock Market Tracker -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/stock_market_tracker.png" width="1602" height="903" loading="lazy"
+                      alt="Modern Stock Market Tracker" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">Finance & ML</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">Modern Stock Market Tracker with Prediction Models</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A real-time stock market tracking application built with Python and Plotly. Features prediction models, interactive charts, and Alpha Vantage integration.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Python</a>
+                        <a href="#" class="span hover-2">#Finance</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">7 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 10: Secure Notes -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/secure_notes.png" width="1602" height="903" loading="lazy"
+                      alt="Secure Notes - Private Note-taking App" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">Web Security</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">Secure Notes - Private Note-taking Application</a>
+                    </h3>
+
+                    <p class="card-text">
+                      A secure, private note-taking application built with React and Firebase. Features user authentication, encryption, and serves 300+ users.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#React</a>
+                        <a href="#" class="span hover-2">#Firebase</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">4 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Project 11: University Projects -->
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                    <img src="./assets/images/university_projects.png" width="1602" height="903" loading="lazy"
+                      alt="University Coursework & Projects" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="card-badge">Academic</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="link hover-2">University Coursework & Academic Projects</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Collection of web applications, MATLAB projects, and algorithms developed during my EEE studies. Focused on numerical analysis and client satisfaction.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#WebApps</a>
+                        <a href="#" class="span hover-2">#MATLAB</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">5 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <!-- Dynamic GitHub Projects Section -->
+            <div class="section-title-wrapper">
+              <h2 class="headline headline-2 section-title">
+                <span class="span">Latest from GitHub</span>
+              </h2>
+              <p class="section-text">
+                My most recent repositories and projects - updated automatically from GitHub
+              </p>
+            </div>
+
+            <div class="github-projects-container">
+              <div class="github-projects-grid" id="github-projects">
+                <div class="loading-spinner">
+                  <div class="spinner"></div>
+                  <p>Loading projects from GitHub...</p>
+                </div>
+              </div>
+            </div>
+
+            <nav aria-label="pagination" class="pagination">
+
+              <a href="#" class="pagination-btn" aria-label="previous page">
+                <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+              </a>
+
+              <a href="#" class="pagination-btn">1</a>
+              <a href="#" class="pagination-btn">2</a>
+
+              <a href="#" class="pagination-btn" aria-label="next page">
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
+            </nav>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="post-aside grid-list">
+
+            <!-- Author Profile -->
+            <div class="card aside-card">
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">About Author</span>
+              </h3>
+
+              <div class="profile-card">
+                <img src="./assets/images/nazmul-avatar.png" width="100" height="100" alt="Nazmul Haque" class="profile-banner">
+
+                <div>
+                  <p class="card-title">Nazmul Haque</p>
+                  <p class="card-subtitle">EEE Student & Developer</p>
+                </div>
+              </div>
+
+              <p class="card-text">
+                Electrical & Electronic Engineering student passionate about programming, web development, machine learning, and quantum computing. I transform ideas into reality through code.
+              </p>
+
+              <div class="hero-social">
+                <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="social-link">
+                  <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/nazmul-haque-nihal/" target="_blank" class="social-link">
+                  <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/nazmul.haque.nihal.07" target="_blank" class="social-link">
+                  <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+                </a>
+                <a href="mailto:nazmulhaque.green@gmail.com" class="social-link">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Popular Posts -->
+            <div class="card aside-card">
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Popular Projects</span>
+              </h3>
+
+              <ul class="popular-list">
+
+                <li>
+                  <a href="https://spd-bd-current-affairs.onrender.com/" target="_blank" class="popular-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                      <img src="./assets/images/spd_current_affairs.png" width="1602" height="903" loading="lazy"
+                        alt="SPD Current Affairs" class="img-cover">
+                    </figure>
+
+                    <div>
+                      <h4 class="headline headline-4 card-title">
+                        SPD Current Affairs
+                      </h4>
+
+                      <p class="card-subtitle">NLP & AI</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="popular-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                      <img src="./assets/images/image_processing_gui.png" width="1602" height="903" loading="lazy"
+                        alt="Object Diameter Measurement" class="img-cover">
+                    </figure>
+
+                    <div>
+                      <h4 class="headline headline-4 card-title">
+                        Object Diameter Measurement
+                      </h4>
+
+                      <p class="card-subtitle">Computer Vision</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://naz-tailors.vercel.app" target="_blank" class="popular-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                      <img src="./assets/images/naz_tailors.png" width="1602" height="903" loading="lazy"
+                        alt="Naz Tailors" class="img-cover">
+                    </figure>
+
+                    <div>
+                      <h4 class="headline headline-4 card-title">
+                        Naz Tailors
+                      </h4>
+
+                      <p class="card-subtitle">E-Commerce</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="popular-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                      <img src="./assets/images/trendtracker.png" width="1602" height="903" loading="lazy"
+                        alt="TrendTracker" class="img-cover">
+                    </figure>
+
+                    <div>
+                      <h4 class="headline headline-4 card-title">
+                        TrendTracker
+                      </h4>
+
+                      <p class="card-subtitle">Data Analytics</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="popular-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                      <img src="./assets/images/stock_market_tracker.png" width="1602" height="903" loading="lazy"
+                        alt="Stock Market Tracker" class="img-cover">
+                    </figure>
+
+                    <div>
+                      <h4 class="headline headline-4 card-title">
+                        Stock Market Tracker
+                      </h4>
+
+                      <p class="card-subtitle">Finance & ML</p>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            <!-- Popular Tags -->
+            <div class="card aside-card tags-card">
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Popular Tags</span>
+              </h3>
+
+              <ul class="grid-list">
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">Python</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="logo-javascript" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">JavaScript</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="logo-react" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">React</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="hardware-chip-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">Machine Learning</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">TensorFlow</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="camera-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">OpenCV</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="cube-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">Blockchain</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="desktop-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">Web Development</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="git-branch-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">MATLAB</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="flame-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">Firebase</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="stats-chart-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">PyTorch</p>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="card tag-btn">
+                    <ion-icon name="server-outline" aria-hidden="true"></ion-icon>
+                    <p class="btn-text">Node.js</p>
+                  </button>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Get In Touch</span>
+          </h2>
+
+          <p class="section-text">
+            Feel free to reach out for collaborations, projects, or just to say hello!
+          </p>
+
+          <div class="contact-grid">
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <h3 class="contact-title">Email</h3>
+              <a href="mailto:nazmulhaque.green@gmail.com" class="contact-link">
+                nazmulhaque.green@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+              </div>
+              <h3 class="contact-title">GitHub</h3>
+              <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="contact-link">
+                @nazmul-haque-nihal
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+              </div>
+              <h3 class="contact-title">LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/nazmul-haque-nihal/" target="_blank" class="contact-link">
+                nazmul-haque-nihal
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <h3 class="contact-title">Location</h3>
+              <p class="contact-text">
+                Rupganj, Dhaka, Bangladesh
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <span class="logo-text">Nazmul Haque</span>
+            </a>
+
+            <p class="footer-text">
+              Personal blog of Nazmul Haque - EEE Student, Full-stack Developer, and ML Engineer. Transforming ideas into reality through code.
+            </p>
+
+            <p class="footer-list-title">Connect With Me</p>
+
+            <address class="footer-text address">
+              nazmulhaque.green@gmail.com<br>
+              Rupganj, Dhaka, Bangladesh
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Quick Links</p>
+
+            <ul>
+
+              <li>
+                <a href="#about" class="footer-link hover-2">About Me</a>
+              </li>
+
+              <li>
+                <a href="#skills" class="footer-link hover-2">Skills</a>
+              </li>
+
+              <li>
+                <a href="#featured" class="footer-link hover-2">Featured Projects</a>
+              </li>
+
+              <li>
+                <a href="#projects" class="footer-link hover-2">All Projects</a>
+              </li>
+
+              <li>
+                <a href="#contact" class="footer-link hover-2">Contact</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Featured Projects</p>
+
+            <ul>
+
+              <li>
+                <a href="https://github.com/nazmul-haque-nihal/Blockchain-Voting-System" target="_blank" class="footer-link hover-2">Blockchain Voting</a>
+              </li>
+
+              <li>
+                <a href="https://nazmul-ai-chatbot.onrender.com" target="_blank" class="footer-link hover-2">SPD AI Chatbot</a>
+              </li>
+
+              <li>
+                <a href="https://github.com/nazmul-haque-nihal/Weapon-Detection-System" target="_blank" class="footer-link hover-2">Weapon Detection</a>
+              </li>
+
+              <li>
+                <a href="https://nazmul-ai-image-generator.netlify.app" target="_blank" class="footer-link hover-2">FANAZ AI Generator</a>
+              </li>
+
+              <li>
+                <a href="https://nazmulprogramming-tools.netlify.app/" target="_blank" class="footer-link hover-2">Programming Tools</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+              Stay updated with my latest projects and articles.
+            </p>
+
+            <form action="https://formspree.io/f/xvzbplpv" method="POST" id="newsletter-form">
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div class="input-wrapper">
+                <input type="email" name="email" placeholder="Email address" required class="input-field"
+                  autocomplete="off">
+
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <span class="span">Subscribe</span>
+
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; 2024 <a href="#" class="copyright-link">Nazmul Haque</a>. All rights reserved.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://github.com/nazmul-haque-nihal" target="_blank" class="social-link">
+                <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+
+                <span class="span">GitHub</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/nazmul-haque-nihal/" target="_blank" class="social-link">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/nazmul.haque.nihal.07" target="_blank" class="social-link">
+                <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+
+                <span class="span">Facebook</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!--
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
