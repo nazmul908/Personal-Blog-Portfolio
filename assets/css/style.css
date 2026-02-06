@@ -346,6 +346,21 @@ body.nav-active { overflow: hidden; }
   border-radius: var(--radius-pill);
 }
 
+.btn-outline {
+  padding: 8px 16px;
+  border-radius: var(--radius-6);
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid var(--bg-carolina-blue);
+  color: var(--bg-carolina-blue);
+}
+
+.btn-outline:is(:hover, :focus-visible) {
+  background-color: var(--bg-carolina-blue);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
 .w-100 { width: 100%; }
 
 .card {
@@ -787,7 +802,22 @@ body.nav-active { overflow: hidden; }
   #HERO
 \*-----------------------------------*/
 
-.hero-bg { display: none; }
+.hero-bg {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.hero-bg-1 {
+  top: 80px;
+  left: 0;
+}
+
+.hero-bg-2 {
+  bottom: -200px;
+  left: -20px;
+}
 
 .hero { padding-block-start: calc(var(--section-padding) + 160px); }
 
@@ -944,7 +974,12 @@ body.nav-active { overflow: hidden; }
   #FEATURED
 \*-----------------------------------*/
 
-.feature-bg { display: none; }
+.feature-bg {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
 
 .feature-list {
   display: flex;
