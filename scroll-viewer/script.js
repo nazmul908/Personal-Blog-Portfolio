@@ -87,9 +87,15 @@ function checkForCVParameter() {
     const urlParams = new URLSearchParams(window.location.search);
     const cvPath = urlParams.get('cv');
 
+    console.log('Checking for CV parameter...');
+    console.log('CV Path:', cvPath);
+    console.log('Current URL:', window.location.href);
+
     if (cvPath) {
         // CV parameter found, auto-load the PDF
         loadCVFromURL(cvPath);
+    } else {
+        console.log('No CV parameter found');
     }
 }
 
@@ -103,18 +109,49 @@ async function loadCVFromURL(cvPath) {
         elements.mainReader.classList.remove('hidden');
         state.isLandingPage = false;
 
-        // Fetch the PDF file
-        const response = await fetch(cvPath);
-        if (!response.ok) {
-            throw new Error('Failed to fetch CV');
+        console.log('Attempting to load CV from:', cvPath);
+        console.log('Current origin:', window.location.origin);
+
+        // Check if we're on file:// protocol
+        const isFileProtocol = window.location.protocol === 'file:';
+        console.log('Is file:// protocol:', isFileProtocol);
+
+        let arrayBuffer;
+
+        if (isFileProtocol) {
+            // For file:// protocol, we need to handle differently
+            console.log('Using file:// protocol, trying alternative loading method...');
+            showNotification('Please run this through a web server. Opening via file:// is not supported.', 'error');
+            showLoading(false);
+            return;
+        } else {
+            // For http:// or https://, use fetch
+            console.log('Using fetch API...');
+
+            // Build absolute URL
+            const absoluteUrl = new URL(cvPath, window.location.href).href;
+            console.log('Absolute URL:', absoluteUrl);
+
+            const response = await fetch(absoluteUrl);
+
+            console.log('Fetch response status:', response.status);
+            console.log('Fetch response ok:', response.ok);
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: Failed to fetch CV from ${absoluteUrl}`);
+            }
+
+            arrayBuffer = await response.arrayBuffer();
         }
 
-        const arrayBuffer = await response.arrayBuffer();
+        console.log('PDF array buffer size:', arrayBuffer.byteLength);
 
         // Load PDF document
         state.pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
         state.totalPages = state.pdfDoc.numPages;
         state.currentPage = 1;
+
+        console.log('PDF loaded successfully. Total pages:', state.totalPages);
 
         // Hide welcome message and show PDF container
         elements.scrollWelcome.classList.add('hidden');
@@ -132,8 +169,21 @@ async function loadCVFromURL(cvPath) {
 
     } catch (error) {
         console.error('Error loading CV:', error);
+        console.error('Error details:', error.message);
         showLoading(false);
-        showNotification('Failed to load CV. Please try again.', 'error');
+
+        // Show detailed error message
+        let errorMessage = 'Failed to load CV. Please try again.';
+
+        if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+            errorMessage = 'Network error: Please run this website through a local web server (not file://).';
+        } else if (error.message.includes('HTTP 404')) {
+            errorMessage = 'CV file not found. Please check the file path.';
+        } else if (error.message.includes('HTTP 403')) {
+            errorMessage = 'Access denied. Check file permissions.';
+        }
+
+        showNotification(errorMessage, 'error');
     }
 }
 
