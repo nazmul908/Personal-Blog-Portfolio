@@ -18,11 +18,12 @@
   <meta name="theme-color" content="#1e1e1f">
 
   <!-- Security Meta Tags -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://formspree.io;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
 
   <!-- Copyright Protection -->
   <meta name="copyright" content="Copyright © 2024 Nazmul Haque. All rights reserved.">
@@ -146,7 +147,7 @@
             </li>
 
             <li>
-              <a href="./assets/My-CV-with-GithubProjectsLinks.pdf" download class="navbar-bottom-link hover-1">Download CV</a>
+              <a href="./scroll-viewer/index.html?cv=./assets/My-CV-with-GithubProjectsLinks.pdf" class="navbar-bottom-link hover-1">View CV</a>
             </li>
 
           </ul>
@@ -160,9 +161,9 @@
 
       </nav>
 
-      <a href="./assets/My-CV-with-GithubProjectsLinks.pdf" download class="btn btn-primary">
-        <span class="span">Download CV</span>
-        <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+      <a href="./scroll-viewer/index.html?cv=./assets/My-CV-with-GithubProjectsLinks.pdf" class="btn btn-primary">
+        <span class="span">View CV</span>
+        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
       </a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
@@ -210,9 +211,9 @@
                 <span class="span">Get In Touch</span>
               </a>
 
-              <a href="./assets/My-CV-with-GithubProjectsLinks.pdf" download class="btn btn-outline">
-                <span class="span">Download CV</span>
-                <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+              <a href="./scroll-viewer/index.html?cv=./assets/My-CV-with-GithubProjectsLinks.pdf" class="btn btn-outline">
+                <span class="span">View CV</span>
+                <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
               </a>
             </div>
 
@@ -1633,6 +1634,11 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+  <!--
+    - security js link
+  -->
+  <script src="./assets/js/security.js"></script>
 
   <!--
     - ionicon link

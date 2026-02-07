@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Scroll Reader - Nazmul Haque</title>
+
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cdnjs.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+    <meta name="copyright" content="Copyright © 2024 Nazmul Haque. All rights reserved.">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif:wght@400;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page Scene -->
+    <div id="landing-scene" class="landing-scene">
+        <!-- Yin-Yang Background -->
+        <div class="landing-bg-image"></div>
+        <div class="landing-bg-overlay"></div>
+        
+        <!-- Tree Decoration -->
+        <div class="tree-decoration">
+            <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" class="tree-svg">
+                <!-- Tree trunk -->
+                <path d="M60,600 Q80,550 70,500 Q60,450 80,400 Q70,350 90,300 Q80,250 100,200 Q90,150 120,100 Q130,80 120,60 Q110,40 100,50 Q90,60 85,80 Q80,100 70,120 Q60,100 55,80 Q50,60 40,70 Q30,80 35,100 Q40,120 50,140 Q45,160 50,180 Q55,200 45,220 Q40,240 50,260 Q60,280 55,300 Q50,320 60,340 Q70,360 65,380 Q60,400 70,420 Q80,440 75,460 Q70,480 80,500 Q90,520 85,540 Q80,560 90,580 Q100,600 90,600 Z" 
+                      fill="#3D2817" stroke="#2A1A0A" stroke-width="2"/>
+                <!-- Branches -->
+                <path d="M100,200 Q150,180 200,190 Q180,170 160,160 Q200,150 240,160 Q220,140 200,130 Q250,120 280,140 Q260,110 230,100 Q280,90 300,120 Q290,80 260,70 Q300,60 320,90 Q310,50 280,40 Q310,30 330,60 Q340,20 310,10 Q330,0 350,30 Q360,-10 330,-20 Q340,-30 360,0 Q380,-20 350,-30 Q355,-40 370,-20 Q385,-30 365,-40 Q370,-50 385,-35 Q400,-45 380,-55 Q385,-65 400,-50 Q415,-60 395,-70 Q400,-80 415,-65 Q430,-75 410,-85 Q415,-95 430,-80 Q445,-90 425,-100" 
+                      fill="#2D4A22" stroke="#1A3A12" stroke-width="2" opacity="0.9"/>
+                <!-- Cherry blossoms -->
+                <circle cx="150" cy="100" r="8" fill="#FFB7C5" opacity="0.8"/>
+                <circle cx="180" cy="120" r="6" fill="#FFC0CB" opacity="0.7"/>
+                <circle cx="200" cy="90" r="7" fill="#FFB7C5" opacity="0.8"/>
+                <circle cx="230" cy="110" r="5" fill="#FFC0CB" opacity="0.6"/>
+                <circle cx="250" cy="95" r="6" fill="#FFB7C5" opacity="0.7"/>
+                <circle cx="280" cy="130" r="7" fill="#FFC0CB" opacity="0.8"/>
+                <circle cx="300" cy="105" r="5" fill="#FFB7C5" opacity="0.6"/>
+                <circle cx="160" cy="140" r="6" fill="#FFC0CB" opacity="0.7"/>
+                <circle cx="220" cy="145" r="8" fill="#FFB7C5" opacity="0.8"/>
+                <circle cx="270" cy="155" r="6" fill="#FFC0CB" opacity="0.7"/>
+            </svg>
+        </div>
+        
+        <!-- Closed Scroll Under Tree -->
+        <div id="closed-scroll" class="closed-scroll">
+            <div class="scroll-shadow"></div>
+            <div class="closed-scroll-body">
+                <div class="scroll-label">Click to Unroll</div>
+                <div class="scroll-decoration top"></div>
+                <div class="scroll-decoration bottom"></div>
+            </div>
+            <div class="scroll-stand"></div>
+        </div>
+        
+        <!-- Welcome Text -->
+        <div class="landing-text">
+            <h1>Ancient Scroll Reader</h1>
+            <p>Discover wisdom from the East</p>
+        </div>
+    </div>
+
+    <!-- Main Reader (Hidden initially) -->
+    <div id="main-reader" class="main-reader hidden">
+        <!-- Left Dragon (Larger) -->
+        <div class="dragon-pillar left-pillar">
+            <img src="left-side-dragon.png" alt="Left Dragon" class="dragon-pillar-img">
+        </div>
+
+        <!-- Right Dragon (Larger) -->
+        <div class="dragon-pillar right-pillar">
+            <img src="right-side-dragon.png" alt="Right Dragon" class="dragon-pillar-img">
+        </div>
+
+        <!-- Horizontal Scroll Assembly -->
+        <div class="scroll-assembly">
+            <!-- Left Hanging Cord -->
+            <div class="hanging-cord left-cord">
+                <div class="cord-knot"></div>
+                <div class="tassel-holder"></div>
+                <div class="silk-tassel left-tassel">
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-end"></div>
+                </div>
+            </div>
+
+            <div class="horizontal-scroll-system">
+                <!-- Left Roller (Fixed) with Ornate Ends -->
+                <div class="h-roller left-roller">
+                    <div class="roller-ornament top-ornament">
+                        <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="30" cy="40" rx="25" ry="35" fill="url(#goldGradientLeft)" stroke="#FFD700" stroke-width="2"/>
+                            <path d="M30,10 Q40,20 35,30 M30,10 Q20,20 25,30" stroke="#8B0000" stroke-width="2" fill="none"/>
+                            <circle cx="30" cy="50" r="8" fill="var(--imperial-red)" stroke="#FFD700" stroke-width="1"/>
+                            <text x="30" y="54" text-anchor="middle" fill="#FFD700" font-size="10" font-family="serif">龍</text>
+                        </svg>
+                    </div>
+                    <div class="h-roller-body">
+                        <div class="h-roller-texture"></div>
+                        <div class="h-roller-shine"></div>
+                        <div class="ancient-pattern left-pattern"></div>
+                    </div>
+                    <div class="roller-ornament bottom-ornament">
+                        <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="30" cy="40" rx="25" ry="35" fill="url(#goldGradientLeft)" stroke="#FFD700" stroke-width="2"/>
+                            <path d="M30,70 Q40,60 35,50 M30,70 Q20,60 25,50" stroke="#8B0000" stroke-width="2" fill="none"/>
+                            <circle cx="30" cy="30" r="8" fill="var(--imperial-red)" stroke="#FFD700" stroke-width="1"/>
+                            <text x="30" y="34" text-anchor="middle" fill="#FFD700" font-size="10" font-family="serif">龍</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Scroll Track -->
+                <div class="scroll-track">
+                    <!-- Top Border Pattern -->
+                    <div class="scroll-border top-border">
+                        <div class="border-pattern"></div>
+                    </div>
+                    
+                    <div class="scroll-paper-container">
+                        <!-- Scroll Paper -->
+                        <div class="scroll-paper" id="scroll-paper">
+                            <div class="paper-texture"></div>
+                            <div class="paper-border left-border"></div>
+                            <div class="paper-border right-border"></div>
+                            
+                            <!-- Welcome message when no PDF loaded -->
+                            <div id="scroll-welcome" class="scroll-welcome">
+                                <div class="scroll-welcome-icon">📜</div>
+                                <h2>Welcome, Esteemed Reader</h2>
+                                <p>Upload a scroll to begin your journey</p>
+                                <label for="pdf-upload" class="upload-scroll-btn">
+                                    <span>📜</span> Upload Scroll
+                                </label>
+                            </div>
+                            
+                            <!-- PDF Canvas -->
+                            <div id="pdf-container" class="pdf-container">
+                                <canvas id="pdf-canvas" class="pdf-canvas"></canvas>
+                                <div class="page-number-indicator">
+                                    <span id="current-page">1</span> / <span id="total-pages">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Border Pattern -->
+                    <div class="scroll-border bottom-border">
+                        <div class="border-pattern"></div>
+                    </div>
+                </div>
+
+                <!-- Right Roller (Movable) with Ornate Ends -->
+                <div class="h-roller right-roller" id="right-roller">
+                    <div class="roller-ornament top-ornament">
+                        <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="30" cy="40" rx="25" ry="35" fill="url(#goldGradientLeft)" stroke="#FFD700" stroke-width="2"/>
+                            <path d="M30,10 Q40,20 35,30 M30,10 Q20,20 25,30" stroke="#8B0000" stroke-width="2" fill="none"/>
+                            <circle cx="30" cy="50" r="8" fill="var(--imperial-red)" stroke="#FFD700" stroke-width="1"/>
+                            <text x="30" y="54" text-anchor="middle" fill="#FFD700" font-size="10" font-family="serif">龍</text>
+                        </svg>
+                    </div>
+                    <div class="h-roller-body">
+                        <div class="h-roller-texture"></div>
+                        <div class="h-roller-shine"></div>
+                        <div class="ancient-pattern right-pattern"></div>
+                    </div>
+                    <div class="roller-ornament bottom-ornament">
+                        <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="30" cy="40" rx="25" ry="35" fill="url(#goldGradientLeft)" stroke="#FFD700" stroke-width="2"/>
+                            <path d="M30,70 Q40,60 35,50 M30,70 Q20,60 25,50" stroke="#8B0000" stroke-width="2" fill="none"/>
+                            <circle cx="30" cy="30" r="8" fill="var(--imperial-red)" stroke="#FFD700" stroke-width="1"/>
+                            <text x="30" y="34" text-anchor="middle" fill="#FFD700" font-size="10" font-family="serif">龍</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Hanging Cord -->
+            <div class="hanging-cord right-cord">
+                <div class="cord-knot"></div>
+                <div class="tassel-holder"></div>
+                <div class="silk-tassel right-tassel">
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-strand"></div>
+                    <div class="tassel-end"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <input type="file" id="pdf-upload" accept=".pdf" class="pdf-input">
+                <label for="pdf-upload" class="upload-button">
+                    <span class="upload-icon">📜</span>
+                    <span class="upload-text">Open Scroll</span>
+                </label>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="navigation-controls">
+                <button id="prev-page" class="nav-button" disabled>
+                    <span class="nav-icon">◀</span>
+                    <span class="nav-label">Previous</span>
+                </button>
+                
+                <div class="page-display">
+                    <span class="page-label">卷</span>
+                    <span id="nav-current-page">1</span>
+                    <span class="page-separator">/</span>
+                    <span id="nav-total-page">-</span>
+                </div>
+
+                <button id="next-page" class="nav-button" disabled>
+                    <span class="nav-label">Next</span>
+                    <span class="nav-icon">▶</span>
+                </button>
+            </div>
+
+            <!-- Zoom Controls -->
+            <div class="additional-controls">
+                <button id="zoom-out" class="control-button" title="Zoom Out">
+                    <span class="control-icon">−</span>
+                </button>
+                
+                <div class="zoom-display" id="zoom-display">
+                    100%
+                </div>
+                
+                <button id="zoom-in" class="control-button" title="Zoom In">
+                    <span class="control-icon">+</span>
+                </button>
+                
+                <button id="fit-width" class="control-button" title="Fit Width">
+                    <span class="control-icon">⇔</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="loading-text">Unrolling the sacred scroll...</p>
+        </div>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        // Initialize PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <script src="script.js"></script>
+    <script src="security.js"></script>
+</body>
+</html>
