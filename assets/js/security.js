@@ -3,11 +3,7 @@
  * Protects against copying, downloading, and unauthorized access
  */
 
-// Disable Right Click Context Menu
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    return false;
-});
+// Right Click Context Menu - ENABLED
 
 // Disable Common Copy Shortcuts (Ctrl+C, Ctrl+U, Ctrl+S, F12, etc.)
 document.addEventListener('keydown', function(e) {
